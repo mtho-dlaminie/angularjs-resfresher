@@ -2,18 +2,14 @@
 
 angular.module('movieDB.catalog', ['ui.bootstrap']).controller('catalogCtrl', [
   '$scope',
-  '$http',
-  function ($scope, $http) {
+  'movieService',
+  function ($scope, movieService) {
     $scope.currentPage = 1;
     $scope.pageSize = 10;
 
-    $http.get('../mock/marvel-movies.json').then(
-      (response) => {
-        $scope.movieList = response.data;
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    movieService.getMovies().then((response) =>{
+      $scope.movieList = response.data;  
+      console.log('movies ', response.data) 
+    })
   },
 ]);

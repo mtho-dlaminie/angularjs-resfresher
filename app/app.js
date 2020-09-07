@@ -6,6 +6,7 @@ angular
     'ui.bootstrap',
     'movieDB.catalog',
     'movieDB.movie',
+    'movieDB.movie-service',
     'movieDB.paginate-filter',
   ])
   .config([

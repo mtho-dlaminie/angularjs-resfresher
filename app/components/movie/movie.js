@@ -3,15 +3,15 @@
 angular.module('movieDB.movie', ['ui.bootstrap']).controller('movieCtrl', [
   '$scope',
   '$filter',
-  '$http',
+  'movieService',
   '$routeParams',
-  function ($scope, $filter, $http, $routeParams) {
-    $scope.movieId = $routeParams.id;
+  function ($scope, $filter, movieService, $routeParams) {
+    const movieId = $routeParams.id;
 
-    $http.get('../mock/marvel-movies.json').then(
+    movieService.getMovies(movieId).then(
       (response) => {
         $scope.movie = $filter('filter')(response.data, {
-          id: $scope.movieId,
+          id: movieId,
         })[0];
       },
       (error) => {
