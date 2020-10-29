@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('movieDB.catalog', ['ui.bootstrap']).controller('catalogCtrl', [
+angular.module('movieDB.movies', ['ui.bootstrap']).controller('moviesCtrl', [
   '$scope',
   'movieService',
   function ($scope, movieService) {
@@ -9,7 +9,6 @@ angular.module('movieDB.catalog', ['ui.bootstrap']).controller('catalogCtrl', [
 
     movieService.getMovies().then((response) =>{
       $scope.movieList = response.data;  
-      console.log('movies ', response.data) 
     })
   },
 ]);

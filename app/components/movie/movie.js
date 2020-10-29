@@ -13,6 +13,8 @@ angular.module('movieDB.movie', ['ui.bootstrap']).controller('movieCtrl', [
         $scope.movie = $filter('filter')(response.data, {
           id: movieId,
         })[0];
+
+        $scope.genreList = ($scope.movie.Genre).split(',');
       },
       (error) => {
         console.log(error);

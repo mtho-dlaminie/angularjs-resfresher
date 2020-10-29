@@ -11,8 +11,10 @@
       </a>
       <div class="card-body d-flex flex-column">
         <h5 class="card-title">{{movie.Title}}</h5>
-        <button type="button"
-                class="mt-auto btn btn-primary">View More</button>
+        <!-- <button type="button" onclick="location.href='#!/movie/{{movie.id}}'" 
+                class="mt-auto btn btn-primary">View More</button> -->
+                <a href="#!/movie/{{movie.id}}" class="btn btn-outline-primary " 
+                role="button" style="margin-top: auto;">View more</a>
       </div>
     </div>
     <div class="col-sm-12">

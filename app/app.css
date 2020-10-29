@@ -1,0 +1,22 @@
+.movie-details .poster {
+    float: left;
+    margin-right: 20px;
+}
+
+.movie-details .movie-title {
+    font-size: 35px;
+    margin-top: 0px;
+}
+
+.movie-details .btn-info {
+    margin-right: 5px;
+}
+
+.movie-details .overview {
+    font-size: 17px;
+    margin: 15px 5% 15px 0px
+}
+
+.movie-details .return-link {
+    float: right;
+}

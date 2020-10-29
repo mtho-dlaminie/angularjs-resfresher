@@ -1,3 +1,23 @@
-{{movie.Title}}
+<div class="jumbotron movie-details col-xs-12">
+    <img class="poster img-thumbnail img-responsive" ng-src="{{ movie.Poster }}">
 
-<!-- TODO: Add Details Page-->
+    <a class="return-link" href="#">
+        <button type="button" class="btn btn-primary"> 
+            <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> 
+            Return to catalog
+        </button>
+    </a>
+
+    <h1 class="movie-title">{{ movie.Title }} {{ movie.Year }}</h1>
+
+    <a ng-repeat="genre in genreList" class="btn btn-info" href="#">{{ genre }}</a>
+
+    <div class="overview"> {{ movie.Plot }}</div>
+
+    <div class="extra-details">
+        <kbd>Runtime: {{ movie.Runtime }}</kbd>
+        <kbd>Country: {{ movie.Country }}</kbd>
+        <kbd>Languages: {{ movie.Language }}</kbd>
+        <kbd>Release: {{ movie.Released }}</kbd>
+    </div>
+</div>
