@@ -20,3 +20,11 @@
 .movie-details .return-link {
     float: right;
 }
+
+.flexcss{
+    display:flex;
+    flex-direction: row
+  }
+  .card-body{
+    padding:5px;
+  }
